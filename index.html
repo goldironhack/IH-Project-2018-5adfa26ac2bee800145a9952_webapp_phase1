@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<title>My Map</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
+
+	<div id="container">
+
+		<div id="leftPanel">
+			<div id="leftHeader"></div>
+			<div id="btnsContainter">
+				<button id="crimesBtn" onClick="showChart(this.id)">SEE CRIME RATES</button>
+				<button id="trafficBtn" onClick="showChart(this.id)">SEE TRAFFIC DENSITY</button>
+				<button id="pollutionBtn" onClick="showChart(this.id)">SEE AIR POLLUTION</button>
+				<button id="tableBtn" onClick="showChart(this.id)">SEE COMPARISON TABLE</button>
+			</div>
+		</div>
+		<div id="rightPanel">
+			<div id="map"></div>
+			<div id="chartsContainer">
+				<div class="chart" id="crimesChart"></div>
+				<div class="chart" id="trafficChart"></div>
+				<div class="chart" id="pollutionChart"></div>
+			</div>
+		</div>
+
+	</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC96XkMS5O1gMAUvm3D3CMHfy8mePxKc5U&callback=initMap"
+    async defer></script>
+
+
+<script src="varDefinitions.js"></script>
+<script src="mapStyles.js"></script>
+<script src="treatFunctions.js"></script>
+<script src="mapFunctions.js"></script>
+<script src="fetchFunctions.js"></script>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="c3.min.js"></script>
+<script src="c3Functions.js"></script>
+
+<script src="uiFunctions.js"></script>
+
 </body>
 </html>
