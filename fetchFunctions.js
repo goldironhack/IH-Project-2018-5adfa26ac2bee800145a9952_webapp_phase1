@@ -95,11 +95,11 @@ fetchPollution = () => {
 	})
 }
 
-
+/*
 fetchCrimes().then(() => treatCrimes(crimes)).then(crimesPerBorough => drawDonutChart(crimesPerBorough, '#crimesChart'))
 fetchPollution().then(() => treatPollution(pollution)).then(pollutionPerBorough => drawDonutChart(pollutionPerBorough, "#pollutionChart"))
 fetchPollution().then(() => treatTraffic(traffic)).then(trafficPerBorough => drawDonutChart(trafficPerBorough, "#trafficChart"))
-
+*/
 fetchNeighborhoods()
 fetchHousingData()
 fetchDistrictGeoshapes()
